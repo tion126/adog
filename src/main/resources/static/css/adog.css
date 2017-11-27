@@ -1,0 +1,130 @@
+
+.adog-tologin-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.adog-tologin-btn a {
+    background: #000;
+    font-size: 13px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.adog-tologin-btn a:hover, .adog-tologin-btn a:active, .adog-tologin-btn a:focus {
+    text-decoration: none;
+    outline: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+.adog-tologin-btn a span{
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: 8;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    background: #d8dce4;
+    background: -moz-linear-gradient(left, #010600 0%, #d8dce4 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #010600), color-stop(100%, #d8dce4));
+    background: -webkit-linear-gradient(left, #010600 0%, #d8dce4 100%);
+    background: -o-linear-gradient(left, #010600 0%, #d8dce4 100%);
+    background: -ms-linear-gradient(left, #010600 0%, #d8dce4 100%);
+    background: linear-gradient(to right, #010600 0%, #d8dce4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3387b', endColorstr='#8628cd', GradientType=1 );
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.adog-tologin-btn a em{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    z-index: 10;
+    font-style: normal;
+    color: #fff;
+    -webkit-transition-delay: .2s;
+    /* Safari */
+    -moz-transition-delay: .2s;
+    transition-delay: .2s;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.adog-tologin-btn a:hover{
+    -webkit-transition-delay: .2s;
+    /* Safari */
+    -moz-transition-delay: .2s;
+    transition-delay: .2s;
+    background: transparent;
+}
+.adog-tologin-btn a:hover em{
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.adog-tologin-btn a:hover span{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    margin-left: 0px;
+}
+@media screen and (max-width: 768px) {
+    .adog-tologin-btn a{
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+    .adog-tologin-btn a span, .adog-tologin-btn a em{
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+.bg-color-black{background-color: #0b0b0b;}

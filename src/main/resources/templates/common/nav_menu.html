@@ -1,0 +1,91 @@
+
+<div style="margin-top: 0px;">
+    <ul class="venus-menu">
+        <li class="showhide" style="display: none;"><span class="title">Menu</span><span class="icon"><em></em><em></em><em></em><em></em></span></li>
+        <li class="active" style=""><a class="btn" href="${ctx}/index">首页</a></li>
+        <li style=""><a href="#"></a></li>
+        <!--@ if(!isEmpty(user_info!)){-->
+            <li style="">
+                <a class="btn" data-toggle="modal" data-target="#myModal">
+                    上传图片
+                </a>
+
+                <span class="indicator">+</span>
+            </li>
+        <!--@}-->
+
+        <li class="search" style="">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            <form method="get">
+                <input name="search" class="search" placeholder="搜索" type="text">
+            </form>
+        </li>
+    </ul>
+</div>
+<div style="margin-top: 5px; clear: both;"></div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade"   id="myModal" tabindex="10" role="dialog" aria-labelledby="myModalLabel" >
+    <div class="modal-dialog" style="width:1100px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    上传图片
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form enctype="multipart/form-data" method="post">
+
+                    <div style="height: 580px;overflow:auto;">
+                        <div class="file-loading">
+                            <input id="jkuploadfile" name="inputupload[]" type="file" multiple>
+                        </div>
+                    </div>
+                    <!--<div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            确定上传
+                        </button>
+                    </div>-->
+                </form>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div>
+</div>
+    <!-- /.modal -->
+<script>
+    $(function() {
+        $("#jkuploadfile").fileinput({
+            language: "zh",
+            uploadUrl: "${ctx}/upload/uploadImg",
+            allowedFileExtensions: ["jpg", "png", "gif","jpeg"],
+            maxFileCount: 100,
+            uploadAsync: true, //默认异步上传
+            enctype: 'multipart/form-data',
+            showUpload: true, //是否显示上传按钮
+            showCaption: true,//是否显示标题
+            browseClass: "btn btn-primary", //按钮样式
+            previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+            msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+        });
+        $("#jkuploadfile").on("fileuploaded", function (event, data, previewId, index) {
+
+            console.info("上传成功....");
+            console.info("event   > :  "+event);
+            console.info("data   > :  "+data);
+            console.info("previewId   > :  "+previewId);
+            console.info("index   > :  "+index);
+            window.location.href = "${ctx}/index";
+        })
+        $('#jkuploadfile').on('fileerror', function(event, data, msg) {
+
+
+        });
+    });
+
+</script>

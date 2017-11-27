@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>a dog a world</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Website Template">
+    <meta name="keywords" content="a world a dog">
+    <!--@ include("/common/import_css.html"){} -->
+    <link rel="stylesheet" href="css/login-register.css">
+</head>
+<body class="bg-color-black">
+<!----------导航条start------------->
+<!--@ include("/common/nav_menu.html"){} -->
+<!-----------end导航条-------------->
+<div class="container" style="padding-bottom: 100px; clear: both;">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <!-- Start Sign In Form -->
+            <form action="#" class="fh5co-form animate-box" data-animate-effect="fadeIn">
+                <h2>忘记密码</h2>
+                <!--<div class="form-group">
+                    <div class="alert alert-success" role="alert">Your email has been sent.</div>
+                </div>-->
+                <div class="form-group">
+                    <label for="email" class="sr-only">邮箱</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="请输入你注册的邮箱" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <p><a href="${ctx}/toLogin">去登录</a> or <a href="${ctx}/toRegister">去注册</a></p>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Send Email" class="btn btn-primary">
+                </div>
+            </form>
+            <!-- END Sign In Form -->
+        </div>
+    </div>
+</div>
+<!---footer--->
+<!--@ include("/common/footer.html"){} -->
+<!---footer--->
+
+<!--@ include("/common/import_js.html"){} -->
+
+</body>
+</html>
